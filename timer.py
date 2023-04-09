@@ -1,4 +1,5 @@
 import time 
+from functools import wraps
 
 def timeit(func):
     def wrapper(*args, **kwargs):

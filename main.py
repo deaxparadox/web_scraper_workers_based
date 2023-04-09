@@ -26,6 +26,7 @@ def callMe(q: Queue, l: Lock):
         try:
             # if queue in empty `continue`
             if q.empty():
+
                 continue
 
             # get url from queue
@@ -84,7 +85,7 @@ class Workers:
             self.__workers.append(
                 Process(
                     target=callMe,
-                    args=(self.__q, self.__l, )
+                    args=(self.__q, self.__l, ),
                 )
             )
     @timeit
